@@ -7,5 +7,15 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <a href="/new">Add a new message</a>
+    <hr/>
+
+    <% locals.messages.forEach((message) => { %>
+      <p>Text: <%= message.text %></p>
+      <p>User: <%= message.user %></p>
+      <p>Added: <%= message.added %></p>
+      <hr/>
+    <% }) %>
+
   </body>
 </html>
