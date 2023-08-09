@@ -17,12 +17,12 @@ const messages = [
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  res.render('index', { title: 'Mini Messageboard', messages });
+  res.render('index', { layout: 'layout', title: 'Mini Messageboard', messages });
 });
 
 /* GET new page. */
 router.get('/new', (req, res) => {
-  res.render('new');
+  res.render('new', { layout: 'layout', title: 'Adding a new message' });
 });
 
 router.post('/new', (req, res) => {
