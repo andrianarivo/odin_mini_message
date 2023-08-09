@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+
+<div class="container">
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <a class="btn btn-outline-primary" href="/new">Add a new message</a>
+
+  <div class="d-flex flex-wrap gap-3 mt-3">
+    <% locals.messages.forEach((message) => { %>
+      <div class="card">
+        <div class="card-header">
+          <%= message.user %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= message.text %></h5>
+          <caption>Posted: <%= message.added.toDateString() %></caption>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+</div>

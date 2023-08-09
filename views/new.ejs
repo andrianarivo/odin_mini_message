@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h1><%= title %></h1>
+  <a class="btn btn-outline-primary" href="/">Back</a>
+  <form method="POST" action="/new" class="w-50 d-flex mt-3 flex-column align-items-stretch justify-content-center gap-3" >
+    <div class="form-group">
+      <label for="message" class="mb-1">Message:</label>
+      <input type="text" class="form-control" id="message" placeholder="Enter your message" name="message" required>
+    </div>
+
+    <div class="form-group">
+      <label for="user" class="mb-1">Name:</label>
+      <input type="text" class="form-control" id="user" placeholder="Enter your name" name="user" required>
+    </div>
+
+    <input type="submit" class="btn btn-success" />
+  </form>
+</div>
